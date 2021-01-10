@@ -58,7 +58,7 @@ contract GasToken2 is Rlp {
             return false;
         }
         s_allowances[owner][spender] = value;
-        Approval(owner, spender, value);
+        emit Approval(owner, spender, value);
         return true;
     }
 
